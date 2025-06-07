@@ -1,3 +1,5 @@
+import kotlin.run
+
 plugins {
     java
     application
@@ -45,4 +47,10 @@ application {
 
 tasks.withType<JavaCompile>().configureEach {
     options.encoding = "UTF-8"
+}
+
+tasks.register<JavaExec>("runAgent") {
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("agents.multitool.MultiToolAgent")
+    standardInput = System.`in`
 }

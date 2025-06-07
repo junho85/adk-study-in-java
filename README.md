@@ -1,1 +1,6 @@
 # adk-study-in-java
+
+```
+export GOOGLE_GENAI_USE_VERTEXAI=FALSE
+export GOOGLE_API_KEY=PASTE_YOUR_ACTUAL_API_KEY_HERE
+```
